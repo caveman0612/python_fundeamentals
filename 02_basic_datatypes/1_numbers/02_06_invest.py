@@ -7,3 +7,5 @@ Take in the following three values from the user:
 Print the future values to the console.
 
 '''
+
+# i dont rememeber the formula
