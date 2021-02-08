@@ -7,3 +7,13 @@ Example input:  1,2,3,4,5,6,7,8,9,10
 Example output: 2,4,6,8,10,9,7,5,3,1
 
 '''
+
+list = []
+p_list = [1,2,3,4,5,6,7,8,9,10]
+# for i in range(10):
+#     num = input("input number")
+#     list.append(num)
+
+print(p_list[1::2])
+reverse = p_list[::-1]
+print(reverse[1::2])
