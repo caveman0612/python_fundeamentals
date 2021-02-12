@@ -7,3 +7,11 @@ The output of your calculation should therefore look like this:
 
 The sum is: 5050
 '''
+
+start, end = input("input two numbers with space").split()
+start = int(start)
+end = int(end)
+sum = 0
+for i in range(start, end + 1):
+    sum += i
+print(sum)

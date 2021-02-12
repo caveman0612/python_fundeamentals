@@ -17,3 +17,7 @@ Another example: if input is 3, you will output
 Hint: Think of nested for loops
 
 '''
+num = input("number of stars")
+num = int(num)
+for i in range(1, num + 1):
+    print("*" * i)
