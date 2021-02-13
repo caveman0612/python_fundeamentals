@@ -25,3 +25,13 @@ office = [
     {"full_name": "Creed Bratton", "item": "mung beans"},
     {"full_name": "Darryl Philbin", "item": "forklift"},
 ]
+
+for dict in office:
+    name = dict.get("full_name")
+    num_name = len(name)
+    name = name.split()
+    item = dict.get("item")
+    num_item = len(item)
+    item1 = "hello"
+
+    print(f"{name[1]},{name[0]}:{item:->{30 - num_name + num_item}}")
