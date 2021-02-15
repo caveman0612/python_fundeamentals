@@ -13,3 +13,21 @@ Write a script that completes the following tasks.
 # call your functions, passing in the user input as the arguments, and set their output equal to new variables 
 
 # print your new variables to display the results
+
+def divisible4or7(number):
+    if number % 4 == 0 or number % 7 == 0:
+        return True
+    else:
+        return False
+
+def divisible4and7(number):
+    if number % 4 == 0 and number % 7 == 0:
+        return True
+    else:
+        return False
+
+
+users_number = int(input("input number"))
+print(divisible4or7(users_number))
+print(divisible4and7(users_number))
+

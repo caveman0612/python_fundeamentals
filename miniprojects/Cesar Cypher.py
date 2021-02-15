@@ -1,5 +1,6 @@
 class Cypher:
 
+    @staticmethod
     def encode_Cesar_cypher(string, cipher=7):
 
         coded_list = []
@@ -20,7 +21,7 @@ class Cypher:
         string = "".join(coded_list)
         return string
 
-
+    @staticmethod
     def decode_Cesar_cypher(string, cipher=7):
         decoded_list = []
         for letter in string:
