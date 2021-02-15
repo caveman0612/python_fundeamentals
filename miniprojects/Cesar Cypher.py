@@ -5,7 +5,7 @@ def encode_Cesar_cypher(string, cipher=7):
     string = string.lower()
     for letter in string:
         num = ord(letter)
-        num = num + 7
+        num = num + cipher
         if num > 122:
             inverse = num - 122
             new_num = 96 + inverse
@@ -21,7 +21,7 @@ def decode_Cesar_cypher(string, cipher=7):
     decoded_list = []
     for letter in string:
         num = ord(letter)
-        num = num - 7
+        num = num - cipher
         if num < 97:
             inverse = 97 - num
             new_num = 123 - inverse
