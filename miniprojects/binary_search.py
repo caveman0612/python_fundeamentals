@@ -18,5 +18,6 @@ def binary_Search(target, list):
         return search
 
 
+
 search = binary_Search(2, sorted_list)
 print(search)
