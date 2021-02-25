@@ -14,7 +14,7 @@ path_map = {"a": {"b": 4, "c": 2},
 #             "z": {"e": 5, "d": 6},
 #             }
 
-
+# should look into: if the path wants to go somewhere its already gone before that should be skipped or canceled
 
 
 def dijkstra_algo(start, end):
@@ -62,63 +62,6 @@ def dijkstra_algo(start, end):
 answer = dijkstra_algo("a", "z")
 print(answer)
 
-# def dijkstra_algo(start, end):
-#     node = start
-#     next_node
-#     path_dict = {}
-#     counter = 0
-#     while node != end:
-#         prospects = path_map[node]
-#         temp_node = ""
-#         weight = 0
-#         for key, values in prospects.items():
-#             if key in path_dict:
-#                 new_key =
-#             if weight == 0:
-#                 weight = values
-#                 temp_node = key
-#             elif values < weight:
-#                 weight = values
-#                 temp_node = key
-#             path_dict[key] = values
-#             path_dict = dict(sorted(path_dict.items() , key=lambda items: items[1]))
-#         node = temp_node
-#
-#         # counter += 1
-#         # if counter == 5:
-#         #     node = end
-#     print(path_dict)
-
-
-
-
-# def dijkstra_algo (start, end):
-#     path = [start,]
-#     temp_dict = {}
-#     already_traveled = [start,]
-#     for key, value in path_map.items():
-#         if key == start:
-#             for key1, value1 in value.items():
-#                 temp_dict[key1] = value1
-#                 temp_dict = dict(sorted(temp_dict.items(), key=lambda items: items[1]))
-#
-#     for i in range(4):
-#         keys = list(temp_dict.keys()) # c
-#         list_values = list(temp_dict.values()) # 2
-#         new_location = path_map.get(keys[0])
-#
-#
-#         for key2, value in new_location.items():
-#             if key2 in already_traveled:
-#                 continue
-#             temp_dict[key2] = value + list_values[0]
-#
-#         temp_dict.pop(keys[0])
-#         already_traveled.append(keys[0])
-#         temp_dict = dict(sorted(temp_dict.items(), key=lambda items: items[1]))
-#
-#
-#     print(temp_dict, already_traveled)
 
 
 

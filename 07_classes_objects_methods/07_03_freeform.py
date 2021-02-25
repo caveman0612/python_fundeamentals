@@ -13,3 +13,19 @@ Using objects you can model anything you want.
 Cars, animals, card games, sports teams, trees, people etc...
 
 '''
+
+class Cat:
+
+    def __init__(self, color, weight):
+        self.color = color
+        self.weight = weight
+
+    def __str__(self):
+        return f"this is a {self.color} Cat who weighs about {self.weight}lbs "
+
+    def __add__(self, other):
+        return self.weight + other
+
+Zuko = Cat("black", 12)
+Squishy = Cat("brown", 20)
+print(Zuko + Squishy)
