@@ -8,3 +8,19 @@ the script should handle:
 Test it and make sure it does not crash when you enter incorrect values.
 
 '''
+
+while True:
+    try:
+        num = int(input("input num"))
+        divisor = int(input("input divisor"))
+        print(num/divisor)
+    except ZeroDivisionError:
+        print("Sorry you can't divide by zero")
+    except ValueError:
+        print("Sorry cant divide by strings")
+    except Exception as e:
+        print(f"{e} has occurred")
+
+# num = int(input("input num"))
+# divisor = int(input("input divisor"))
+# print(num/divisor)
