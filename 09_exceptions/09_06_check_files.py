@@ -8,3 +8,20 @@ only if neither of them applies.
 '''
 
 file_name = 'integers.txt'
+
+
+
+
+with open(file_name, "r") as file:
+    try:
+        file1 = file.read()
+        file2 = file1.split("\n")
+        for num in file2:
+            num = num *2
+            print(num)
+    except Exception as e:
+        print(f"{e}")
+
+
+
+    # print(file2)

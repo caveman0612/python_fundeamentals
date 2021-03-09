@@ -23,3 +23,38 @@ BONUS CHALLENGE: write a custom Exception that inherits from Exception and raise
 first 100 characters of any of the files contain the string "Prince".
 
 '''
+word = "Prince"
+
+file = open("books\crime_and_punishment.txt", "r", errors="ignore")
+file1 = open("books\pride_and_prejudice.txt", "r", errors="ignore")
+file2 = open("books\war_and_peace.txt", "r", errors="ignore")
+
+def search(string, word):
+    for i, letter in enumerate(string):
+        if letter == word[0]:
+            if string[i:(i+len(word))] == word:
+                print(word)
+                return
+    print(f"no {word} in this string")
+
+try:
+    file_str = file.read()
+    file1_str = file1.read()
+    file2_str = file2.read()
+
+    start0 = file_str[:100]
+    start1 = file1_str[:100]
+    start2 = file2_str[:100]
+
+    search(start0, word)
+    search(start1, word)
+    search(start2, word)
+
+
+
+
+finally:
+    file.close()
+    file1.close()
+    file2.close()
+
