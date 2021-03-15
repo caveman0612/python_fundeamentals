@@ -1,24 +1,25 @@
 def nodeDepths(root):
-    global total
-    total = 0
-    nodeDepthHelper(root)
-    print(total)
-    return total
+    total = []
+    nodeDepthHelper(root, total, 0)
+    return sum(total)
 
-def nodeDepthHelper(root, d=0):
-    depth = d + 1
+def nodeDepthHelper(root, total, depth):
     if root.left == None and root.right == None:
-        global total
-        total += depth
+        if depth > 0:
+            total.append(depth)
     if root.left == None and root.right != None:
-        nodeDepthHelper(root.left, depth)
+        if depth > 0:
+            total.append(depth)
+        nodeDepthHelper(root.right, total, (depth+1))
     if root.left != None and root.right == None:
-        nodeDepthHelper(root.right, depth)
+        if depth > 0:
+            total.append(depth)
+        nodeDepthHelper(root.left, total, (depth+1))
     if root.left != None and root.right != None:
-        nodeDepthHelper(root.left, depth)
-        nodeDepthHelper(root.right, depth)
-
-
+        if depth > 0:
+            total.append(depth)
+        nodeDepthHelper(root.left, total, (depth+1))
+        nodeDepthHelper(root.right, total, (depth+1))
 
 # This is the class of the input binary tree.
 class BinaryTree:
