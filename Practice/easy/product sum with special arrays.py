@@ -1,14 +1,24 @@
-def productSum(array, depth=1, total_sum = 0):
+def productSum(array, depth=0):
+    total_sum = 0
+    depth += 1
     for item in array:
-        # print(type(item))
         if isinstance(item, int):
-            # print("yes")
             total_sum += item
         if isinstance(item, list):
-            answer = productSum(item, depth + 1, total_sum)
-            return answer * depth
+            temp = productSum(item, depth) * (depth + 1)
+            total_sum += temp
     return total_sum
 
+# def productSumHelper(array, depth):
+#     total_sum = 0
+#     depth += 1
+#     for item in array:
+#         if isinstance(item, int):
+#             total_sum += item
+#         if isinstance(item, list):
+#             temp = productSumHelper(item, depth) * (depth + 1)
+#             total_sum += temp
+#     return total_sum
 
 array = [5, 2, [7, -1], 3, [6, [-13, 8], 4]]
 answer = productSum(array)
