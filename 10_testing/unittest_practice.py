@@ -10,3 +10,12 @@ into different files. Note that you will run into an error when attempting to im
 because Python modules can't begin with a number.
 
 '''
+
+
+def is_even(num):
+    if num % 2 == 0:
+        return True
+    return False
+
+def add(num, num1):
+    return num + num1
