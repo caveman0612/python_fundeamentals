@@ -10,5 +10,5 @@ def binarySearchHelper(array, target, left, right):
     elif array[middle] > target:
         return binarySearchHelper(array, target, left, middle - 1)
     elif array[middle] < target:
-        return binarySearchHealper(array, target, middle + 1, right)
+        return binarySearchHelper(array, target, middle + 1, right)
     
